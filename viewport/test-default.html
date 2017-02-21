@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Viewport</title>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+</head>
+
+<body>
+    <div>
+        <span>document.documentElement.clientWidth:</span>
+        <span id="a"></span>
+    </div>
+    <div>
+        <span>document.documentElement.clientHeight:</span>
+        <span id="b"></span>
+    </div>
+    <div>
+        <span>window.innerWidth:</span>
+        <span id="c"></span>
+    </div>
+    <div>
+        <span>window.innerHeight:</span>
+        <span id="d"></span>
+    </div>
+    <div>
+        <span>window.screen.width:</span>
+        <span id="e"></span>
+    </div>
+    <div>
+        <span>window.screen.height:</span>
+        <span id="f"></span>
+    </div>
+</body>
+<script type="text/javascript">
+    function update() {
+        document.querySelector("#a").innerHTML = document.documentElement.clientWidth;
+        document.querySelector("#b").innerHTML = document.documentElement.clientHeight;
+        document.querySelector("#c").innerHTML = window.innerWidth;
+        document.querySelector("#d").innerHTML = window.innerHeight;
+        document.querySelector("#e").innerHTML = window.screen.width;
+        document.querySelector("#f").innerHTML = window.screen.height;
+    }
+    window.ontouchend = function() {
+        update();
+    };
+    update();
+</script>
+
+</html>
