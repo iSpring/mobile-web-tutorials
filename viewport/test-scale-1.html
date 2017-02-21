@@ -8,43 +8,51 @@
 
 <body>
     <div>
-        <span>document.documentElement.clientWidth:</span>
+        <span>window.devicePixelRatio</span>
         <span id="a"></span>
     </div>
     <div>
-        <span>document.documentElement.clientHeight:</span>
+        <span>document.documentElement.clientWidth:</span>
         <span id="b"></span>
     </div>
     <div>
-        <span>window.innerWidth:</span>
+        <span>document.documentElement.clientHeight:</span>
         <span id="c"></span>
     </div>
     <div>
-        <span>window.innerHeight:</span>
+        <span>window.innerWidth:</span>
         <span id="d"></span>
     </div>
     <div>
-        <span>window.screen.width:</span>
+        <span>window.innerHeight:</span>
         <span id="e"></span>
     </div>
     <div>
-        <span>window.screen.height:</span>
+        <span>window.screen.width:</span>
         <span id="f"></span>
+    </div>
+    <div>
+        <span>window.screen.height:</span>
+        <span id="g"></span>
     </div>
 </body>
 <script type="text/javascript">
     function update() {
-        document.querySelector("#a").innerHTML = document.documentElement.clientWidth;
-        document.querySelector("#b").innerHTML = document.documentElement.clientHeight;
-        document.querySelector("#c").innerHTML = window.innerWidth;
-        document.querySelector("#d").innerHTML = window.innerHeight;
-        document.querySelector("#e").innerHTML = window.screen.width;
-        document.querySelector("#f").innerHTML = window.screen.height;
+        document.querySelector("#a").innerHTML = window.devicePixelRatio;
+        document.querySelector("#b").innerHTML = document.documentElement.clientWidth;
+        document.querySelector("#c").innerHTML = document.documentElement.clientHeight;
+        document.querySelector("#d").innerHTML = window.innerWidth;
+        document.querySelector("#e").innerHTML = window.innerHeight;
+        document.querySelector("#f").innerHTML = window.screen.width;
+        document.querySelector("#g").innerHTML = window.screen.height;
     }
-    window.ontouchend = function() {
+    // window.ontouchend = function() {
+    //     setTimeout(update, 500);
+    // };
+    // update();
+    setInterval(function() {
         update();
-    };
-    update();
+    }, 500);
 </script>
 
 </html>
