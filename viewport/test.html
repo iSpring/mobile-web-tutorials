@@ -8,7 +8,7 @@
 
 <body>
     <div>
-        <span>window.devicePixelRatio</span>
+        <span>window.devicePixelRatio:</span>
         <span id="a"></span>
     </div>
     <div>
@@ -35,6 +35,14 @@
         <span>window.screen.height:</span>
         <span id="g"></span>
     </div>
+    <div>
+        <span>window.screen.availWidth</span>
+        <span id="h"></span>
+    </div>
+    <div>
+        <span>window.screen.availHeight</span>
+        <span id="i"></span>
+    </div>
 </body>
 <script type="text/javascript">
     function update() {
@@ -45,6 +53,8 @@
         document.querySelector("#e").innerHTML = window.innerHeight;
         document.querySelector("#f").innerHTML = window.screen.width;
         document.querySelector("#g").innerHTML = window.screen.height;
+        document.querySelector("#h").innerHTML = window.screen.availWidth;
+        document.querySelector("#i").innerHTML = window.screen.availHeight;
     }
     // window.ontouchend = function() {
     //     setTimeout(update, 500);
