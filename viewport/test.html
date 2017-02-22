@@ -3,46 +3,61 @@
 
 <head>
     <title>Test Viewport</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        td {
+            border: 1px solid;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <span>window.devicePixelRatio:</span>
-        <span id="a"></span>
-    </div>
-    <div>
-        <span>document.documentElement.clientWidth:</span>
-        <span id="b"></span>
-    </div>
-    <div>
-        <span>document.documentElement.clientHeight:</span>
-        <span id="c"></span>
-    </div>
-    <div>
-        <span>window.innerWidth:</span>
-        <span id="d"></span>
-    </div>
-    <div>
-        <span>window.innerHeight:</span>
-        <span id="e"></span>
-    </div>
-    <div>
-        <span>window.screen.width:</span>
-        <span id="f"></span>
-    </div>
-    <div>
-        <span>window.screen.height:</span>
-        <span id="g"></span>
-    </div>
-    <div>
-        <span>window.screen.availWidth</span>
-        <span id="h"></span>
-    </div>
-    <div>
-        <span>window.screen.availHeight</span>
-        <span id="i"></span>
-    </div>
+    <table>
+        <tbody>
+            <tr>
+                <td>window.devicePixelRatio</td>
+                <td id="a"></td>
+            </tr>
+            <tr>
+                <td>document.documentElement.clientWidth</td>
+                <td id="b"></td>
+            </tr>
+            <tr>
+                <td>document.documentElement.clientHeight</td>
+                <td id="c"></td>
+            </tr>
+            <tr>
+                <td>window.innerWidth</td>
+                <td id="d"></td>
+            </tr>
+            <tr>
+                <td>window.innerHeight</td>
+                <td id="e"></td>
+            </tr>
+            <tr>
+                <td>window.screen.width</td>
+                <td id="f"></td>
+            </tr>
+            <tr>
+                <td>window.screen.height</td>
+                <td id="g"></td>
+            </tr>
+            <tr>
+                <td>window.screen.availWidth</td>
+                <td id="h"></td>
+            </tr>
+            <tr>
+                <td>window.screen.availHeight</td>
+                <td id="i"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 <script type="text/javascript">
     function update() {
