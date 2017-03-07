@@ -31,6 +31,18 @@
             }
         }
 
+        @media (max-device-width: 400px){
+            tr.test-max-device-width{
+                display: table-row;
+            }
+        }
+
+        @media (min-device-width: 400px){
+            tr.test-min-device-width{
+                display: table-row;
+            }
+        }
+
         @media (orientation: portrait) {
             tr.test-orientation-portrait {
                 display: table-row;
@@ -122,6 +134,32 @@
                     <pre>
 @media (min-width: 400px) {
     tr.test-min-width {
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
+            </tr>
+
+            <tr class="test test-max-device-width">
+                <td colspan="2">
+                    <div>如果显示该文本，说明设备的CSS宽度小于400px，应用了如下的Media Query</div>
+                    <pre>
+@media (max-device-width: 400px){
+    tr.test-max-device-width{
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
+            </tr>
+
+            <tr class="test test-min-device-width">
+                <td colspan="2">
+                    <div>如果显示该文本，说明设备的CSS宽度大于400px，应用了如下的Media Query</div>
+                    <pre>
+@media (min-device-width: 400px){
+    tr.test-min-device-width{
         display: table-row;
     }
 }
