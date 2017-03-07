@@ -91,6 +91,12 @@
             }
         }
 
+        @media not all and (min-resolution: 2dppx){
+            tr.test-not-min-resolution-dppx{
+                display: table-row;
+            }
+        }
+
         @media (max-width: 700px) and (orientation: landscape) {
             tr.test-max-width-and-orientation {
                 display: table-row;
@@ -311,6 +317,20 @@
     }
 }
                     </pre>
+                </td>
+            </tr>
+
+            <tr class="test test-not-min-resolution-dppx">
+                <td colspan="2">
+                    <div>如果显示该文本，说明window.devicePixelRatio <= 2，应用了如下的Media Query</div>
+                    <pre>
+@media not all and (min-resolution: 2dppx){
+    tr.test-not-min-resolution-dppx{
+        display: table-row;
+    }
+}
+                    </pre>
+                    <em>@media not all and (min-resolution: 2dppx)可以理解为@media not (all and (min-resolution: 2dppx))</em>
                 </td>
             </tr>
 
