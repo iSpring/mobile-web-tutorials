@@ -3,22 +3,9 @@
 
 <head>
     <title>Test Viewport</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style type="text/css">
-        @media (max-width: 400px) {
-            body {
-                background-color: rgba(255, 0, 0, 0.5);
-            }
-        }
-        
-        @media (min-width: 400px) {
-            body {
-                background-color: rgba(0, 255, 0, 0.5);
-            }
-        }
-    </style>
-    <style>
         table {
             border-collapse: collapse;
         }
@@ -26,6 +13,22 @@
         td {
             border: 1px solid;
             padding: 10px;
+        }
+        
+        tr.test {
+            display: none;
+        }
+        
+        @media (max-width: 400px) {
+            tr.test-max-width {
+                display: table-row;
+            }
+        }
+        
+        @media (min-width: 400px) {
+            tr.test-min-width {
+                display: table-row;
+            }
         }
     </style>
 </head>
@@ -69,11 +72,29 @@
                 <td>window.screen.availHeight</td>
                 <td id="i"></td>
             </tr>
-            <tr>
-                <td colspan="2">如果背景是红色，表示Layout Viewport宽度小于400px</td>
+            <tr class="test test-max-width">
+                <td colspan="2">
+                    <div>如果显示该文本，说明Layout Viewport宽度小于400px，应用了如下的Media Query</div>
+                    <pre>
+@media (max-width: 400px) {
+    tr.test-max-width {
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
             </tr>
-            <tr>
-                <td colspan="2">如果背景是绿色，表示Layout Viewport大于400px</td>
+            <tr class="test test-min-width">
+                <td colspan="2">
+                    <div>如果显示该文本，说明Layout Viewport宽度大于400px，应用了如下的Media Query</div>
+                    <pre>
+@media (min-width: 400px) {
+    tr.test-min-width {
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
             </tr>
         </tbody>
     </table>
