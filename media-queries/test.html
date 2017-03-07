@@ -55,6 +55,18 @@
             }
         }
 
+        @media (device-aspect-ratio: 16/9){
+            tr.test-device-aspect-ratio-16-9{
+                display: table-row;
+            }
+        }
+
+        @media (device-aspect-ratio: 4/3){
+            tr.test-device-aspect-ratio-4-3{
+                display: table-row;
+            }
+        }
+
         @media (orientation: portrait) {
             tr.test-orientation-portrait {
                 display: table-row;
@@ -191,6 +203,7 @@
     }
 }
                     </pre>
+                    <div>在PC电脑上可以通过调整浏览器窗口的大小改变视口的宽高比</div>
                 </td>
             </tr>
 
@@ -204,6 +217,35 @@
     }
 }
                     </pre>
+                    <div>在PC电脑上可以通过调整浏览器窗口的大小改变视口的宽高比</div>
+                </td>
+            </tr>
+
+            <tr class="test test-device-aspect-ratio-16-9">
+                <td colspan="2">
+                    <div>如果显示该文本，表示设备整个显示屏幕的宽高比正好为16/9</div>
+                    <pre>
+@media (device-aspect-ratio: 16/9){
+    tr.test-device-aspect-ratio-16-9{
+        display: table-row;
+    }
+}
+                    </pre>
+                    <div>设备显示屏幕的宽高比是一个固定值，不会随着视口大小的变化而变化。还可以使用min-device-aspect-ratio和max-device-aspect-ratio。最新的Media Queries Level 4工作草案中已经将device-width废弃了。</div>
+                </td>
+            </tr>
+
+            <tr class="test test-device-aspect-ratio-4-3">
+                <td colspan="2">
+                    <div>如果显示该文本，表示设备整个显示屏幕的宽高比正好为4/3</div>
+                    <pre>
+@media (device-aspect-ratio: 4/4){
+    tr.test-device-aspect-ratio-4-3{
+        display: table-row;
+    }
+}
+                    </pre>
+                    <div>设备显示屏幕的宽高比是一个固定值，不会随着视口大小的变化而变化。还可以使用min-device-aspect-ratio和max-device-aspect-ratio。最新的Media Queries Level 4工作草案中已经将device-width废弃了。</
                 </td>
             </tr>
 
