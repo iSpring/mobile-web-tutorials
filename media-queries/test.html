@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Test Viewport</title>
+    <title>Media Queries</title>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style type="text/css">
@@ -27,6 +27,18 @@
         
         @media (min-width: 400px) {
             tr.test-min-width {
+                display: table-row;
+            }
+        }
+        
+        @media (max-width: 700px) and (orientation: landscape) {
+            tr.test-max-width-and-orientation {
+                display: table-row;
+            }
+        }
+        
+        @media (min-width: 700px) and (orientation: landscape) {
+            tr.test-min-width-and-orientation {
                 display: table-row;
             }
         }
@@ -90,6 +102,30 @@
                     <pre>
 @media (min-width: 400px) {
     tr.test-min-width {
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
+            </tr>
+            <tr class="test test-max-width-and-orientation">
+                <td colspan="2">
+                    <div>如果显示该文本，说明当前页面是在横屏模式（Landscape）下，且Layout Viewport宽度小于700px，应用了如下的Media Query</div>
+                    <pre>
+@media (max-width: 700px) and (orientation: landscape) {
+    tr.test-max-width-and-orientation {
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
+            </tr>
+            <tr class="test test-min-width-and-orientation">
+                <td colspan="2">
+                    <div>如果显示该文本，说明当前页面是在横屏模式（Landscape）下，且Layout Viewport宽度大于700px，应用了如下的Media Query</div>
+                    <pre>
+@media (min-width: 700px) and (orientation: landscape) {
+    tr.test-min-width-and-orientation {
         display: table-row;
     }
 }
