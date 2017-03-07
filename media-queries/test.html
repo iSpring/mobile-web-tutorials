@@ -3,8 +3,8 @@
 
 <head>
     <title>Media Queries</title>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
     <style type="text/css">
         table {
             border-collapse: collapse;
@@ -80,7 +80,13 @@
         }
 
         @media (min-resolution: 192dpi){
-            tr.test-min-resolution{
+            tr.test-min-resolution-dpi{
+                display: table-row;
+            }
+        }
+
+        @media (min-resolution: 2dppx){
+            tr.test-min-resolution-dppx{
                 display: table-row;
             }
         }
@@ -281,18 +287,31 @@
                 </td>
             </tr>
 
-            <tr class="test test-min-resolution">
+            <tr class="test test-min-resolution-dpi">
                 <td colspan="2">
                     <div>如果显示该文本，说明每英寸的<strong>CSS像素数</strong>超过了192，应用了如下的Media Query</div>
                     <pre>
 @media (min-resolution: 192dpi){
-    tr.test-min-resolution{
+    tr.test-min-resolution-dpi{
+        display: table-row;
+    }
+}
+                    </pre>
+                    <em>Media Queries Level 3 REC标准中定义的dpi为<a href="https://www.w3.org/TR/css3-mediaqueries/#resolution0" target="_blank">设备像素（device pixels）</a>，但是Media Queries Level 4工作草案中特意对dpi的度量单位进行了修改，规定其单位为<a href="https://drafts.csswg.org/mediaqueries-4/#resolution" target="_blank">CSS像素</a>。</em>
+                </td>
+            </tr>
+
+            <tr class="test test-min-resolution-dppx">
+                <td colspan="2">
+                    <div>如果显示该文本，说明window.devicePixelRatio >= 2，应用了如下的Media Query</div>
+                    <pre>
+@media (min-resolution: 2dppx){
+    tr.test-min-resolution-dppx{
         display: table-row;
     }
 }
                     </pre>
                 </td>
-                <em>Media Queries Level 3 REC标准中定义的dpi为<a href="https://www.w3.org/TR/css3-mediaqueries/#resolution0" target="_blank">设备像素（device pixels）</a>，但是Media Queries Level 4工作草案中特意对dpi的度量单位进行了修改，规定其单位为<a href="https://drafts.csswg.org/mediaqueries-4/#resolution" target="_blank">CSS像素</a>。</em>
             </tr>
 
             <tr class="test test-max-width-and-orientation">
