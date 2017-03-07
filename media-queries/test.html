@@ -79,6 +79,12 @@
             }
         }
 
+        @media (min-resolution: 192dpi){
+            tr.test-min-resolution{
+                display: table-row;
+            }
+        }
+
         @media (max-width: 700px) and (orientation: landscape) {
             tr.test-max-width-and-orientation {
                 display: table-row;
@@ -273,6 +279,20 @@
 }
                     </pre>
                 </td>
+            </tr>
+
+            <tr class="test test-min-resolution">
+                <td colspan="2">
+                    <div>如果显示该文本，说明每英寸的<strong>CSS像素数</strong>超过了192，应用了如下的Media Query</div>
+                    <pre>
+@media (min-resolution: 192dpi){
+    tr.test-min-resolution{
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
+                <em>Media Queries Level 3 REC标准中定义的dpi为<a href="https://www.w3.org/TR/css3-mediaqueries/#resolution0" target="_blank">设备像素（device pixels）</a>，但是Media Queries Level 4工作草案中特意对dpi的度量单位进行了修改，规定其单位为<a href="https://drafts.csswg.org/mediaqueries-4/#resolution" target="_blank">CSS像素</a>。</em>
             </tr>
 
             <tr class="test test-max-width-and-orientation">
