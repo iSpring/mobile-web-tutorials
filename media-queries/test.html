@@ -43,6 +43,18 @@
             }
         }
 
+        @media (min-aspect-ratio: 1/1){
+            tr.test-min-aspect-ratio{
+                display: table-row;
+            }
+        }
+
+        @media (max-aspect-ratio: 1/1){
+            tr.test-max-aspect-ratio{
+                display: table-row;
+            }
+        }
+
         @media (orientation: portrait) {
             tr.test-orientation-portrait {
                 display: table-row;
@@ -151,6 +163,7 @@
     }
 }
                     </pre>
+                    <div>最新的Media Queries Level 4工作草案中已经将device-width废弃了</div>
                 </td>
             </tr>
 
@@ -160,6 +173,33 @@
                     <pre>
 @media (min-device-width: 400px){
     tr.test-min-device-width{
+        display: table-row;
+    }
+}
+                    </pre>
+                    <div>最新的Media Queries Level 4工作草案中已经将device-width废弃了</div>
+                </td>
+            </tr>
+
+            <tr class="test test-min-aspect-ratio">
+                <td colspan="2">
+                    <div>如果显示该文本，表示Viewport的宽度大于高度，应用了如下的Media Query</div>
+                    <pre>
+@media (min-aspect-ratio: 1/1){
+    tr.test-min-aspect-ratio{
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
+            </tr>
+
+            <tr class="test test-max-aspect-ratio">
+                <td colspan="2">
+                    <div>如果显示该文本，表示Viewport的宽度小于高度，应用了如下的Media Query</div>
+                    <pre>
+@media (max-aspect-ratio: 1/1){
+    tr.test-max-aspect-ratio{
         display: table-row;
     }
 }
@@ -218,6 +258,7 @@
                     </pre>
                 </td>
             </tr>
+
             <tr class="test test-orientation-landscape-or-portrait-and-min-width">
                 <td colspan="2">
                     <div>如果显示该文本，说明当前页面处于横屏模式（Landscape）或者处于竖屏模式（Portrait）且竖屏模式下的宽度大于700px，应用了如下的Media Query</div>
@@ -230,6 +271,7 @@
                     </pre>
                 </td>
             </tr>
+
         </tbody>
     </table>
 </body>
