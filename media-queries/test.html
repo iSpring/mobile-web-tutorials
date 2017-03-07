@@ -31,6 +31,18 @@
             }
         }
         
+        @media (orientation: portrait) {
+            tr.test-orientation-portrait {
+                display: table-row;
+            }
+        }
+        
+        @media(orientation: landscape) {
+            tr.test-orientation-landscape {
+                display: table-row;
+            }
+        }
+        
         @media (max-width: 700px) and (orientation: landscape) {
             tr.test-max-width-and-orientation {
                 display: table-row;
@@ -84,6 +96,7 @@
                 <td>window.screen.availHeight</td>
                 <td id="i"></td>
             </tr>
+
             <tr class="test test-max-width">
                 <td colspan="2">
                     <div>如果显示该文本，说明Layout Viewport宽度小于400px，应用了如下的Media Query</div>
@@ -96,6 +109,7 @@
                     </pre>
                 </td>
             </tr>
+
             <tr class="test test-min-width">
                 <td colspan="2">
                     <div>如果显示该文本，说明Layout Viewport宽度大于400px，应用了如下的Media Query</div>
@@ -108,6 +122,33 @@
                     </pre>
                 </td>
             </tr>
+
+            <tr class="test test-orientation-portrait">
+                <td colspan="2">
+                    <div>如果显示该文本，说明当前页面是在竖屏模式（Portrait）下，应用了如下的Media Query</div>
+                    <pre>
+@media (orientation: portrait) {
+    tr.test-orientation-portrait {
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
+            </tr>
+
+            <tr class="test test-orientation-landscape">
+                <td colspan="2">
+                    <div>如果显示该文本，说明当前页面是在横屏模式（Landscape）下，应用了如下的Media Query</div>
+                    <pre>
+@media(orientation: landscape) {
+    tr.test-orientation-landscape {
+        display: table-row;
+    }
+}
+                    </pre>
+                </td>
+            </tr>
+
             <tr class="test test-max-width-and-orientation">
                 <td colspan="2">
                     <div>如果显示该文本，说明当前页面是在横屏模式（Landscape）下，且Layout Viewport宽度小于700px，应用了如下的Media Query</div>
@@ -120,6 +161,7 @@
                     </pre>
                 </td>
             </tr>
+
             <tr class="test test-min-width-and-orientation">
                 <td colspan="2">
                     <div>如果显示该文本，说明当前页面是在横屏模式（Landscape）下，且Layout Viewport宽度大于700px，应用了如下的Media Query</div>
