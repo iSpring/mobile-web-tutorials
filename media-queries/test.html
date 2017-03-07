@@ -330,7 +330,7 @@
     }
 }
                     </pre>
-                    <em>@media not all and (min-resolution: 2dppx)可以理解为@media not (all and (min-resolution: 2dppx))</em>
+                    <em>当使用not或only操作符时，必须要显式指定Media Type，否则Media Query不起效。比如@media not (min-resolution: 2dppx)永远不会生效，需要改成@media not all and (min-resolution: 2dppx)。 @media not all and (min-resolution: 2dppx)可以理解为@media not (all and (min-resolution: 2dppx))。</em>
                 </td>
             </tr>
 
