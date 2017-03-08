@@ -48,6 +48,14 @@
         </thead>
         <tbody>
             <tr>
+                <td>password</td>
+                <td>
+                    <input type="password" required pattern=".{6,}" placeholder="至少输入六个字符" title="至少输入六个字符" />
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
                 <td>email</td>
                 <td>
                     <input type="email" required placeholder="请输入邮箱" />
@@ -90,7 +98,7 @@
             <tr>
                 <td>url</td>
                 <td>
-                    <input type="url" required placeholder="请输入URL地址" />
+                    <input type="url" required placeholder="请输入以https开头的URL地址" pattern="https://.+" title="请输入以https开头的URL地址" />
                 </td>
                 <td></td>
             </tr>
@@ -134,14 +142,6 @@
                 </td>
                 <td></td>
             </tr>
-
-            <!--<tr>
-                <td>datetime</td>
-                <td>
-                    <input type="datetime" />
-                </td>
-                <td>废弃了</td>
-            </tr>-->
 
             <tr>
                 <td>datetime-local</td>
