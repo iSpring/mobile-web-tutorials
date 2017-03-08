@@ -11,10 +11,26 @@
             border-collapse: collapse;
         }
         
+        th,
         td {
             border: 1px solid #ccc;
             padding: 10px;
         }
+        
+        input {
+            width: 200px;
+        }
+        
+        input:valid {
+            border: 1px solid green;
+        }
+        
+        input:invalid {
+            border: 1px solid red;
+        }
+        /*input:placeholder-shown {
+            border: 1px solid blue;
+        }*/
     </style>
 </head>
 
@@ -23,90 +39,139 @@
         <colgroup>
             <col />
             <col />
+            <col />
         </colgroup>
+        <thead>
+            <th>类型</th>
+            <th>控件</th>
+            <th>值</th>
+        </thead>
         <tbody>
             <tr>
                 <td>email</td>
                 <td>
-                    <input type="email" />
+                    <input type="email" required placeholder="请输入邮箱" />
                 </td>
+                <td></td>
             </tr>
 
             <tr>
                 <td>number</td>
                 <td>
-                    <input type="number" />
+                    <input type="number" min="0" max="100" step="10" required placeholder="请输入数字" />
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>range</td>
                 <td>
-                    <input type="range" />
+                    <input type="range" min="0" max="100" step="5" />
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>search</td>
                 <td>
-                    <input type="search" />
+                    <input type="search" required placeholder="请输入关键字" />
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>tel</td>
                 <td>
-                    <input type="tel" />
+                    <input type="tel" required placeholder="请输入电话号码" />
                 </td>
+                <td></td>
             </tr>
 
             <tr>
                 <td>url</td>
                 <td>
-                    <input type="url" />
+                    <input type="url" required placeholder="请输入URL地址" />
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>color</td>
                 <td>
-                    <input type="color" />
+                    <input type="color" value="#00ff00" />
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>date</td>
                 <td>
-                    <input type="date" />
+                    <input type="date" placeholder="请选择日期" />
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>month</td>
                 <td>
                     <input type="month" />
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>week</td>
                 <td>
                     <input type="week" />
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>time</td>
                 <td>
                     <input type="time" />
                 </td>
+                <td></td>
             </tr>
-            <tr>
+
+            <!--<tr>
                 <td>datetime</td>
                 <td>
                     <input type="datetime" />
                 </td>
-            </tr>
+                <td>废弃了</td>
+            </tr>-->
+
             <tr>
                 <td>datetime-local</td>
                 <td>
                     <input type="datetime-local" />
                 </td>
+                <td></td>
             </tr>
         </tbody>
     </table>
+    <!--<p>input边框为蓝色表示为其设置了required属性，该input是必填的，但是用户没有填入值。</p>-->
+    <p>input边框为红色表示其填入的值与其type类型不一致，值是无效的。或者为其设置了required属性，该input是必填的，但是用户没有填入值。</p>
+    <p>input边框为绿色表示填入了合法的值。</p>
 </body>
+
+<script type="text/javascript">
+    var inputs = document.querySelectorAll("input");
+    inputs.forEach(function(inputDom) {
+        var valueTd = inputDom.parentNode.nextElementSibling;
+
+        function showValue() {
+            valueTd.innerText = inputDom.value;
+        }
+
+        inputDom.addEventListener("change", function() {
+            showValue();
+        }, false);
+
+        showValue();
+    });
+</script>
 
 </html>
