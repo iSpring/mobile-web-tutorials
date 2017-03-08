@@ -29,12 +29,14 @@
         input:invalid {
             border-color: rgb(255, 0, 0);
         }
-        /*input:placeholder-shown {
-            border: 1px solid blue;
-        }*/
-        /*input:optional {
-            background-color: rgba(255, 255, 0, 0.1);
-        }*/
+        
+        input:required::after {
+            content: "必填";
+        }
+        
+        input:optional::after {
+            content: "选填";
+        }
     </style>
 </head>
 
