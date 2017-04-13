@@ -3,7 +3,7 @@
 
 <head>
     <title>Viewport</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
     <style>
         table {
@@ -14,10 +14,17 @@
             border: 1px solid;
             padding: 10px;
         }
+
+        h2{
+            width: 99999px;
+            background: green;
+        }
     </style>
 </head>
 
 <body>
+    <h2>Visual Viewport = window.innerWidth/Height</h2>
+    <h2>Layout Viewport = document.documentElement.clientWidth/Height</h2>
     <table>
         <tbody>
             <tr>

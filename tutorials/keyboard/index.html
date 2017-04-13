@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Soft Keyboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>document.documentElement.clientWidth</td>
+                <td id="a"></td>
+            </tr>
+            <tr>
+                <td>document.documentElement.clientHeight</td>
+                <td id="b"></td>
+            </tr>
+            <tr>
+                <td>window.innerWidth</td>
+                <td id="c"></td>
+            </tr>
+            <tr>
+                <td>window.innerHeight</td>
+                <td id="d"></td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="text" />
+</body>
+
+<script type="text/javascript">
+    function update() {
+        document.querySelector("#a").innerHTML = document.documentElement.clientWidth;
+        document.querySelector("#b").innerHTML = document.documentElement.clientHeight;
+        document.querySelector("#c").innerHTML = window.innerWidth;
+        document.querySelector("#d").innerHTML = window.innerHeight;
+    }
+
+    setInterval(function() {
+        update();
+    }, 500);
+</script>
+
+</html>
