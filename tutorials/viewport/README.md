@@ -20,7 +20,7 @@ document.documentElement.clientWidth/Height属性对不包含滚动条，但是w
 
 此处为简化讨论，我们暂时不考虑Retina屏的情况。假设在100%缩放条件下，我们显示器的1 CSS像素尺寸等于1 物理像素尺寸，我们浏览器窗口的初始尺寸是800px X 600px，即浏览器窗口的初始CSS像素尺寸是800px X 600px，而且物理像素尺寸也是800px X 600px，这种情况下，我们通过window.innerWidth/Height属性对和document.documentElement.clientWidth/Height属性对得到的都是800px X 600px。
 
-如果我们通过鼠标滚轮放大了当前页面，比如从100%放大到200%了，此时1个CSS像素需要2*2个物理像素表示，在放大的过程中，物理像素没有变化，还是800px X 600px，但是CSS像素就不一样了，由于CSS像素的的边长在横向上被扩大了两倍，那么放大后的浏览器窗口只包含800 / 2个CSS像素，即400个CSS像素宽，同样地，浏览器窗口的CSS高度尺寸也变为原来的一般，即300个CSS像素高，放大到200%后，我们通过window.innerWidth/Height属性对和document.documentElement.clientWidth/Height属性对得到的都是400px X 300px，即此时Viewport的尺寸就是400px X 300px。页面缩放导致会导致Viewport尺寸变化。`桌面浏览器的Viewport等价于浏览器窗口的CSS尺寸`，这句话依然是没错的，只不过现在浏览器窗口的CSS尺寸变小了。
+如果我们通过鼠标滚轮放大了当前页面，比如从100%放大到200%了，此时1个CSS像素需要2*2个物理像素表示，在放大的过程中，物理像素没有变化，还是800px X 600px，但是CSS像素就不一样了，由于CSS像素的的边长在横向上被扩大了两倍，那么放大后的浏览器窗口只包含800 / 2个CSS像素，即400个CSS像素宽，同样地，浏览器窗口的CSS高度尺寸也变为原来的一半，即300个CSS像素高，放大到200%后，我们通过window.innerWidth/Height属性对和document.documentElement.clientWidth/Height属性对得到的都是400px X 300px，即此时Viewport的尺寸就是400px X 300px。由此可见，页面缩放会导致Viewport尺寸变化。桌面浏览器的Viewport依然等价于浏览器窗口的CSS尺寸，只不过现在浏览器窗口的CSS尺寸变小了。
 
 ## 移动浏览器
 
