@@ -7,6 +7,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style type="text/css">
+        html{
+            overflow: hidden;
+            width:100%;
+            /*background-color: red;*/
+        }
+
+        body{
+            /*prevent overscroll bounce*/
+            position:fixed;
+            height:100%;
+            top: 0;
+            bottom: 0;
+            overflow-y:auto;
+
+            /* iOS velocity scrolling */
+            -webkit-overflow-scrolling: touch;
+            /*background-color: lightgreen;*/
+        }
+
+        #input2{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
     </style>
 </head>
 
@@ -31,7 +55,9 @@
             </tr>
         </tbody>
     </table>
-    <input type="text" />
+    <input id="input1" type="text" placeholder="1" />
+    <div>测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本</div>
+    <input id="input2" type="text" placeholder="2" />
 </body>
 
 <script type="text/javascript">
@@ -45,6 +71,10 @@
     setInterval(function() {
         update();
     }, 500);
+
+    // window.onresize = function(){
+    //     alert("resize");
+    // };
 </script>
 
 </html>
