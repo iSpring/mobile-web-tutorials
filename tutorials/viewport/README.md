@@ -27,7 +27,7 @@ document.documentElement.clientWidth/Height属性对不包含滚动条，但是w
 ## 总结
 Viewport细分为Visual Viewport和Layout Viewport，都以CSS单位进行度量。
 
-Visual Viewport: 任意时刻，浏览器窗口左上角到右下角之间的CSS像素尺寸。通过window.innerWidth/Height度量。
-Layout Viewport: CSS布局，尤其是百分比宽度，是以layout viewport做为参照系来计算的，通过document.documentElement.clientWidth/Height度量。
- PC浏览器的Layout Viewport：等于Visual Viewport
- 移动浏览器的Layout Viewport: 在100%缩放比例下，浏览器窗口左上角到右下角之间的CSS像素尺寸，即100%缩放比例下的Visual Layout尺寸。
+ - Visual Viewport: 任意时刻，浏览器窗口左上角到右下角之间的CSS像素尺寸。通过window.innerWidth/Height度量。
+ - Layout Viewport: CSS布局，尤其是百分比宽度，是以layout viewport做为参照系来计算的，通过document.documentElement.clientWidth/Height度量。
+   - PC浏览器的Layout Viewport：等于Visual Viewport
+   - 移动浏览器的Layout Viewport: 在100%缩放比例下，浏览器窗口左上角到右下角之间的CSS像素尺寸，即100%缩放比例下的Visual Layout尺寸。
